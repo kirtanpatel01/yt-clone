@@ -3,7 +3,7 @@ import fs from 'fs';
 import { configDotenv } from "dotenv";
 
 configDotenv({
-    path: './.env' // Ensure this path is correct
+    path: './.env'
 });
 
 const my_cloud_name = process.env.CLOUD_NAME
@@ -15,7 +15,6 @@ cloudinary.config({
     api_key: my_api_key, 
     api_secret: my_api_secret,
 });
-
 
 const uploadOnCloudinary = async (localFilePath) => {
     try {
